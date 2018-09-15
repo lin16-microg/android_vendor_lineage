@@ -25,6 +25,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += AuroraStore
 # Bromite Webview
 PRODUCT_PACKAGES += bromite-webview
+# IPTABLES Block script
+PRODUCT_PACKAGES += z_iptables
 
 # Make sure that device overlays won't prevent the use
 # of microG as location provider
