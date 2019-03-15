@@ -20,6 +20,9 @@ PRODUCT_PACKAGES += \
     NominatimNlpBackend \
     com.google.android.maps.jar
 
+# YalpStore
+PRODUCT_PACKAGES += YalpStore
+
 # Make sure that device overlays won't prevent the use
 # of microG as location provider
 PRODUCT_PACKAGE_OVERLAYS := vendor/lineage/overlay/microg
