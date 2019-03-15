@@ -22,6 +22,8 @@ PRODUCT_PACKAGES += \
 
 # YalpStore
 PRODUCT_PACKAGES += YalpStore
+# Bromite Webview
+PRODUCT_PACKAGES += bromite-webview
 
 # Make sure that device overlays won't prevent the use
 # of microG as location provider
