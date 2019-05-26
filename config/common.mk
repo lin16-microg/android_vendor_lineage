@@ -20,8 +20,8 @@ PRODUCT_PACKAGES += \
     NominatimNlpBackend \
     com.google.android.maps.jar
 
-# YalpStore
-PRODUCT_PACKAGES += YalpStore
+# AuroraStore
+PRODUCT_PACKAGES += AuroraStore
 # Bromite Webview
 PRODUCT_PACKAGES += bromite-webview
 
