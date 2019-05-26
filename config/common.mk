@@ -18,7 +18,8 @@ PRODUCT_PACKAGES += \
     FDroidPrivilegedExtension \
     MozillaNlpBackend \
     NominatimNlpBackend \
-    com.google.android.maps.jar
+    com.google.android.maps.jar \
+    additional_repos.xml
 
 # AuroraStore
 PRODUCT_PACKAGES += AuroraStore
