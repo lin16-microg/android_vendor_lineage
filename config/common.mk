@@ -26,7 +26,9 @@ PRODUCT_PACKAGES += \
     additional_repos.xml
 
 # AuroraStore
-PRODUCT_PACKAGES += AuroraStore
+PRODUCT_PACKAGES += \
+    AuroraServices \
+    AuroraStore
 # Bromite Webview
 PRODUCT_PACKAGES += bromite-webview
 # IPTABLES Block script
