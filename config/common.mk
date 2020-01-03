@@ -11,7 +11,7 @@ endif
 
 # Updater URI
 PRODUCT_PROPERTY_OVERRIDES += \
-    lineage.updater.uri=https://raw.githubusercontent.com/lin16-microG/OTA/lin-16.1-microG/$(LINEAGE_BUILD).json
+    lineage.updater.uri=https://raw.githubusercontent.com/lin16-microG/OTA/lin-16.0-microG/$(LINEAGE_BUILD).json
 
 # microG packages
 PRODUCT_PACKAGES += \
