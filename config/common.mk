@@ -9,9 +9,11 @@ PRODUCT_OTA_PUBLIC_KEYS := user-keys/releasekey
 PRODUCT_EXTRA_RECOVERY_KEYS := user-keys/releasekey
 endif
 
-# Updater URI
+# Updater URI and changelog
 PRODUCT_PROPERTY_OVERRIDES += \
     lineage.updater.uri=https://raw.githubusercontent.com/lin16-microG/OTA/lin-16.0-microG/$(LINEAGE_BUILD).json
+DEVICE_PACKAGE_OVERLAYS += \
+    vendor/lineage/overlay/changelog/$(LINEAGE_BUILD)
 
 # microG packages
 PRODUCT_PACKAGES += \
