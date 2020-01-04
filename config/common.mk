@@ -27,6 +27,9 @@ PRODUCT_PACKAGES += \
     com.google.android.maps.jar \
     additional_repos.xml
 
+# Privacy-friendly netmonitor
+PRODUCT_PACKAGES += privacy-friendly-netmonitor
+
 # AuroraStore
 PRODUCT_PACKAGES += \
     AuroraServices \
