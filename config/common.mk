@@ -191,17 +191,13 @@ PRODUCT_PACKAGES += \
     Backgrounds \
     LineageSettingsProvider \
     LineageSetupWizard \
+    Eleven \
     ExactCalculator \
     Jelly \
     LockClock \
     TrebuchetQuickStep \
     Updater \
     WeatherProvider
-
-# Phongraph from OmniROM
-# (Instead of Lineage's Eleven)
-PRODUCT_PACKAGES += \
-    Phonograph
 
 # Exchange support
 PRODUCT_PACKAGES += \
