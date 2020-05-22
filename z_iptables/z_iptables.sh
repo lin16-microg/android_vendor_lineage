@@ -16,6 +16,7 @@ cat <<EOF
 com.android.captiveportallogin
 com.android.providers.downloads
 com.aurora.store
+com.firstrowria.pushnotificationtester
 com.github.yeriomin.yalpstore
 com.google.android.gms
 com.netflix.mediaclient
