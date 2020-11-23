@@ -59,6 +59,7 @@ $IP6TABLES -A 'oem_out' -d 2a03:2880::/31 -j REJECT --reject-with icmp6-port-unr
 $IPTABLES -A 'oem_out' -d 31.13.24.0/21 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 31.13.64.0/18 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 45.64.40.0/22 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 45.172.103.0/24 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 66.220.144.0/20 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 69.63.176.0/20 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 69.171.224.0/19 -j REJECT --reject-with icmp-port-unreachable
@@ -73,6 +74,7 @@ $IPTABLES -A 'oem_out' -d 179.60.192.0/22 -j REJECT --reject-with icmp-port-unre
 $IPTABLES -A 'oem_out' -d 185.60.216.0/22 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 185.89.218.0/23 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 204.15.20.0/22 -j REJECT --reject-with icmp-port-unreachable
+
 
 # Shoot Google exceptions (app list)
 list_apps | while read APP; do
@@ -115,6 +117,7 @@ $IPTABLES -A 'oem_out' -d 35.204.0.0/15 -j REJECT --reject-with icmp-port-unreac
 $IPTABLES -A 'oem_out' -d 35.206.0.0/22 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.206.4.0/24 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.206.6.0/24 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 35.206.9.0/24 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.206.32.0/19 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.206.64.0/18 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.206.128.0/17 -j REJECT --reject-with icmp-port-unreachable
