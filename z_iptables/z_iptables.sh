@@ -17,6 +17,7 @@ com.android.captiveportallogin
 com.android.providers.downloads
 com.aurora.store
 com.aurora.store4
+com.aurora.store.beta
 com.firstrowria.pushnotificationtester
 com.github.yeriomin.yalpstore
 com.google.android.gms
