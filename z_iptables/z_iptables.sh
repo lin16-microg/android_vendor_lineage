@@ -54,6 +54,8 @@ $IP6TABLES -F 'oem_out'
 ## Own rules to block
 ##
 do_block() {
+# X-mode
+$IPTABLES -A 'oem_out' -d 184.168.131.241 -j REJECT --reject-with icmp-port-unreachable
 # Reject outgoing IPv6 traffic to Facebook (w/o exception)
 $IP6TABLES -A 'oem_out' -d 2620:0:1c00::/40 -j REJECT --reject-with icmp6-port-unreachable
 $IP6TABLES -A 'oem_out' -d 2a03:2880::/31 -j REJECT --reject-with icmp6-port-unreachable
@@ -61,7 +63,6 @@ $IP6TABLES -A 'oem_out' -d 2a03:2880::/31 -j REJECT --reject-with icmp6-port-unr
 $IPTABLES -A 'oem_out' -d 31.13.24.0/21 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 31.13.64.0/18 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 45.64.40.0/22 -j REJECT --reject-with icmp-port-unreachable
-$IPTABLES -A 'oem_out' -d 45.172.103.0/24 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 66.220.144.0/20 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 69.63.176.0/20 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 69.171.224.0/19 -j REJECT --reject-with icmp-port-unreachable
@@ -76,7 +77,10 @@ $IPTABLES -A 'oem_out' -d 179.60.192.0/22 -j REJECT --reject-with icmp-port-unre
 $IPTABLES -A 'oem_out' -d 185.60.216.0/22 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 185.89.218.0/23 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 204.15.20.0/22 -j REJECT --reject-with icmp-port-unreachable
-
+# Reject outgoing IPv4 traffic to Palantir
+$IPTABLES -A 'oem_out' -d 8.4.231.0/24 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 62.67.195.0/24 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 198.97.14.0/23 -j REJECT --reject-with icmp-port-unreachable
 
 # Shoot Google exceptions (app list)
 list_apps | while read APP; do
@@ -108,6 +112,10 @@ $IPTABLES -A 'oem_out' -d 34.64.0.0/11 -j REJECT --reject-with icmp-port-unreach
 $IPTABLES -A 'oem_out' -d 34.96.0.0/12 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 34.116.0.0/14 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 34.120.0.0/13 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 34.128.0.0/11 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 34.160.0.0/12 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 34.176.0.0/13 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 34.184.0.0/14 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.184.0.0/13 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.192.0.0/14 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.196.0.0/15 -j REJECT --reject-with icmp-port-unreachable
@@ -117,7 +125,7 @@ $IPTABLES -A 'oem_out' -d 35.199.128.0/18 -j REJECT --reject-with icmp-port-unre
 $IPTABLES -A 'oem_out' -d 35.200.0.0/14 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.204.0.0/15 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.206.0.0/22 -j REJECT --reject-with icmp-port-unreachable
-$IPTABLES -A 'oem_out' -d 35.206.4.0/24 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 35.206.4.0/23 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.206.6.0/24 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.206.9.0/24 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.206.32.0/19 -j REJECT --reject-with icmp-port-unreachable
@@ -125,7 +133,11 @@ $IPTABLES -A 'oem_out' -d 35.206.64.0/18 -j REJECT --reject-with icmp-port-unrea
 $IPTABLES -A 'oem_out' -d 35.206.128.0/17 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.207.0.0/17 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.207.128.0/18 -j REJECT --reject-with icmp-port-unreachable
-$IPTABLES -A 'oem_out' -d 35.208.0.0/13 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 35.208.0.0/14 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 35.212.0.0/16 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 35.213.0.0/17 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 35.213.128.0/18 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 35.214.0.0/15 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.216.0.0/15 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.219.0.0/17 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 35.219.128.0/18 -j REJECT --reject-with icmp-port-unreachable
