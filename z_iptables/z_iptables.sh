@@ -13,6 +13,7 @@ IP6TABLES=/system/bin/ip6tables
 ##
 list_apps() {
 cat <<EOF
+canvasm.myo2
 com.android.captiveportallogin
 com.android.providers.downloads
 com.aurora.store
