@@ -19,7 +19,7 @@ PRODUCT_PACKAGES += \
     FakeStore \
     FDroid \
     FDroidPrivilegedExtension \
-    MozillaNlpBackend \
+    IchnaeaNlpBackend \
     NominatimNlpBackend \
     com.google.android.maps.jar \
     additional_repos.xml
