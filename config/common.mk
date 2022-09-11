@@ -27,7 +27,6 @@ PRODUCT_PACKAGES += \
     FDroidPrivilegedExtension \
     IchnaeaNlpBackend \
     NominatimNlpBackend \
-    com.google.android.maps.jar \
     additional_repos.xml
 
 # Privacy-friendly netmonitor
