@@ -31,8 +31,6 @@ PRODUCT_PACKAGES += eSpeakTTS
 PRODUCT_PACKAGES += \
     AuroraServices \
     AuroraStore
-# Bromite Webview
-PRODUCT_PACKAGES += bromite-webview
 # IPTABLES Block script
 PRODUCT_PACKAGES += z_iptables
 
