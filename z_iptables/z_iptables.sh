@@ -25,8 +25,10 @@ com.vonglasow.michael.satstat
 eu.faircode.email
 org.freeandroidtools.safetynettest
 org.microg.gms.droidguard
+org.mozilla.firefox
 org.schabi.newpipe
 org.thoughtcrime.securesms
+us.spotco.fennec_dos
 EOF
 }
 
