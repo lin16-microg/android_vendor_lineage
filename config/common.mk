@@ -25,8 +25,6 @@ PRODUCT_PACKAGES += \
     FakeStore \
     FDroid \
     FDroidPrivilegedExtension \
-    IchnaeaNlpBackend \
-    NominatimNlpBackend \
     additional_repos.xml
 
 # Privacy-friendly netmonitor
