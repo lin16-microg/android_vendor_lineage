@@ -23,12 +23,9 @@ PRODUCT_PACKAGES += \
 
 # Privacy-friendly netmonitor
 PRODUCT_PACKAGES += privacy-friendly-netmonitor
-#eSpeakTTS engine
-PRODUCT_PACKAGES += eSpeakTTS
 # AuroraStore
 PRODUCT_PACKAGES += \
-    AuroraServices \
-    AuroraStore
+    AuroraServices
 # IPTABLES Block script
 PRODUCT_PACKAGES += z_iptables
 
