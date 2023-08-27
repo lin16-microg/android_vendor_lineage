@@ -69,7 +69,7 @@ $IPTABLES -A 'oem_out' -d 216.200.189.0/24 -j REJECT --reject-with icmp-port-unr
 $IPTABLES -A 'oem_out' -d 216.200.190.0/24 -j REJECT --reject-with icmp-port-unreachable
 # Reject outgoing IPv6 traffic to Facebook (w/o exception)
 $IP6TABLES -A 'oem_out' -d 2620:0:1c00::/40 -j REJECT --reject-with icmp6-port-unreachable
-$IP6TABLES -A 'oem_out' -d 2a03:2880::/31 -j REJECT --reject-with icmp6-port-unreachable
+$IP6TABLES -A 'oem_out' -d 2a03:2880::/32 -j REJECT --reject-with icmp6-port-unreachable
 # Reject outgoing IPv4 traffic to Facebook (w/o exception)
 $IPTABLES -A 'oem_out' -d 31.13.24.0/21 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 31.13.64.0/18 -j REJECT --reject-with icmp-port-unreachable
@@ -83,10 +83,12 @@ $IPTABLES -A 'oem_out' -d 103.4.96.0/22 -j REJECT --reject-with icmp-port-unreac
 $IPTABLES -A 'oem_out' -d 129.134.0.0/17 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 157.240.0.0/17 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 157.240.192.0/18 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 163.70.128.0/17 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 163.77.128.0/17 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 173.252.64.0/18 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 179.60.192.0/22 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 185.60.216.0/22 -j REJECT --reject-with icmp-port-unreachable
-$IPTABLES -A 'oem_out' -d 185.89.218.0/23 -j REJECT --reject-with icmp-port-unreachable
+$IPTABLES -A 'oem_out' -d 185.89.216.0/22 -j REJECT --reject-with icmp-port-unreachable
 $IPTABLES -A 'oem_out' -d 204.15.20.0/22 -j REJECT --reject-with icmp-port-unreachable
 
 # Shoot Google exceptions (app list)
