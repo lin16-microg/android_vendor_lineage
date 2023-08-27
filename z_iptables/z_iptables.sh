@@ -23,8 +23,10 @@ com.google.android.gms
 com.netflix.mediaclient
 com.vonglasow.michael.satstat
 eu.faircode.email
+org.cromite.cromite
 org.freeandroidtools.safetynettest
 org.microg.gms.droidguard
+org.lineageos.jelly
 org.mozilla.firefox
 org.schabi.newpipe
 org.thoughtcrime.securesms
